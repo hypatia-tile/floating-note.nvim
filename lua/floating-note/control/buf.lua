@@ -24,7 +24,6 @@ end
 ---@return number bufnr Buffer number of existing or created buffer
 function M.get_or_create_buf(name)
 	local bufnr = vim.fn.bufnr(name)
-	vim.notify("Buffer number for " .. name .. " is " .. bufnr)
 	if bufnr ~= -1 then
 		-- If buffer exists, reutrn it
 		return bufnr

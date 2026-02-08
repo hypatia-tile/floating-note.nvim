@@ -23,8 +23,8 @@ function M.layout(opts)
 	local H = (ui and ui.height) or vim.o.lines
 	local w = math.min(size_part(opts.width, W, 0.8), W - 2)
 	local h = math.min(size_part(opts.height, H, 0.8), H - 2)
-	local col = math.floor((H - h) / 2)
-	local row = math.floor((W - w) / 2)
+	local col = math.floor((W - w) / 2)
+	local row = math.floor((H - h) / 2)
 	return w, h, row, col
 end
 

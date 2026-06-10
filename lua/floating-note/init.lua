@@ -20,6 +20,7 @@ M.setup = function()
     M.toggle_note(memodir, {
       border = "rounded",
       title = "Floating Note",
+      winblend = 20,
     })
   end, { noremap = true, silent = true, desc = "Toggle Floating-note" })
 end

@@ -22,7 +22,7 @@ function M.get_or_open_float(buf, opts)
   end
 
   -- Buffer not in floating window, create a new one
-  return vim.api.nvim_open_win(buf, false, {
+  local win = vim.api.nvim_open_win(buf, false, {
     relative = "editor",
     width = w,
     height = h,
@@ -33,6 +33,8 @@ function M.get_or_open_float(buf, opts)
     title = (opts and opts.title) or "Notes",
     title_pos = "center",
   })
+  vim.wo[win].winblend = (opts and opts.winblend ~= nil) and opts.winblend or 20
+  return win
 end
 
 return M

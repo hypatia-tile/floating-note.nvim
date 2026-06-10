@@ -32,7 +32,8 @@ The plugin follows a modular architecture with separation of concerns across the
 4. **window.lua** (lua/floating-note/control/window.lua) - Window management
    - `get_or_open_float(buf, opts)` - Returns existing floating window or creates new one
    - **Important**: Only reuses windows that are floating (`config.relative ~= ""`)
-   - Creates centered floating windows with configurable borders and titles
+   - Creates centered floating windows with configurable borders, titles, and transparency
+   - `opts.winblend` (0–100) controls transparency; defaults to 20
 
 5. **layout.lua** (lua/floating-note/control/layout.lua) - Layout calculations
    - `layout(opts)` - Calculates window dimensions and position

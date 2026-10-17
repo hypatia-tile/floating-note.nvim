@@ -50,7 +50,7 @@ midnight) counts as "a different note".
 
 ### Step 1: Test harness
 
-- [ ] Step 1 done
+- [x] Step 1 done
 
 Get one trivial test running before any behaviour changes.
 

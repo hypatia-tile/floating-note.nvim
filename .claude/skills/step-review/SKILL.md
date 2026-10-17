@@ -21,6 +21,9 @@ person who wrote the code can judge that.
   fixes arrive as new commits on `rework`, never by amend or rebase of
   something already pushed.
 - **The agent commits documents only when asked**, and asks before every push.
+  The one exception is a progress update to `docs/roadmap.md` (ticking a
+  step's checkbox): the owner gave standing permission to commit and push
+  those on `rework` without asking.
 
 ## Before starting
 
@@ -68,7 +71,9 @@ on the issue when they do.
 
 After the declaration:
 
-1. Tick the step's checkbox in `docs/roadmap.md`. Commit it only if asked.
+1. Tick the step's checkbox in `docs/roadmap.md`, then commit it as
+   `docs: mark Step N as done` with `Refs #<issue>` and push it to `rework`.
+   No confirmation is needed for this.
 2. Close the issue.
 3. After Step 8, remind the owner that `rework` is ready to merge into `main`
    and that their Neovim configuration needs the new `setup()` call. That

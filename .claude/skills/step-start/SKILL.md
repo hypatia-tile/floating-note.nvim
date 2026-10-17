@@ -16,7 +16,9 @@ handing over a clear target, not a solution.
 - **The agent never edits `lua/` or `tests/`.**
 - **The agent writes documents only** — `docs/roadmap.md`, these skills, issue
   and comment text — and commits them only when the owner asks. Ask before
-  every push.
+  every push. The one exception is a progress update to `docs/roadmap.md`
+  (ticking a step's checkbox), which the agent commits and pushes on
+  `rework` without asking.
 - **All step work lands on the `rework` branch.** `main` keeps the old
   behaviour until Step 8 is declared done, because the owner uses the plugin
   daily from `main` and Step 4 removes the API their configuration calls.
